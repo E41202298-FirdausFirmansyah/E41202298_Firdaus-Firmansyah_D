@@ -29,7 +29,7 @@ public class Array {
         System.out.println("         Dengan Harga Minium Rp 10000,00");
         System.out.println("--------------------------------------------------");
         System.out.print("Masukkan Nama Pembeli : ");
-        nama = masuk.next();
+        nama = masuk.nextLine();
         System.out.println("");
         System.out.print("Masukkan harga barang ke-1 : ");
         barangPertama = masuk.nextInt();

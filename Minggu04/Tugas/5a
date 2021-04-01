@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package a;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ASUS
+ */
+public class A {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //membuat scanner
+        Scanner masuk = new Scanner(System.in);
+        //membuat variabel batas
+        int batasAwal, batasAkhir;
+        //memasukkan batas dari keyboard user
+        System.out.print("Masukkan Batas Awal = ");
+        batasAwal = masuk.nextInt();
+        System.out.print("Masukkan Batas Akhir = ");
+        batasAkhir = masuk.nextInt();
+        System.out.println("=============================================");
+        //looping bilangan genap
+        System.out.println("Bilangan Genap dari Kecil ke Besar :");
+        for (int i = batasAwal; i <= batasAkhir; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}

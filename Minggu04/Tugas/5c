@@ -1,0 +1,52 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package c;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ASUS
+ */
+public class C {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //membuat Scanner dan variabel
+        Scanner masuk = new Scanner(System.in);
+        int jmlData, jmlNilai = 0, rataRata;
+        //membuat masukan data 
+        System.out.print("Masukan banyaknya data nilai = ");
+        jmlData = masuk.nextInt();
+        int[] nilaiMasuk = new int[jmlData];
+        //looping banyak data dengan For
+        for (int i = 0; i < jmlData; i++) {
+            System.out.print("Masukan data nilai ke-" + (i + 1) + " = ");
+            nilaiMasuk[i] = masuk.nextInt();
+            //menghitung semua nilai
+            jmlNilai += nilaiMasuk[i];
+        }
+        System.out.println("");
+        //membuat variabel nilai Maksimum dan Minimum
+        int Minimum = nilaiMasuk[0];
+        int Maksimum = nilaiMasuk[0];
+        for (int i = 0; i < jmlData; i++) {
+            //membuat kondisi untuk menghitung nilai Maksimum dan Minimum
+            if (nilaiMasuk[i] < Minimum) {
+                Minimum = nilaiMasuk[i];
+            } else if (nilaiMasuk[i] > Maksimum) {
+                Maksimum = nilaiMasuk[i];
+            }
+        }
+        rataRata = jmlNilai / jmlData;
+        //menampilkan hasil
+        System.out.println("Nilai minimum = " + Minimum);
+        System.out.println("Nilai maximum = " + Maksimum);
+        System.out.println("NIlai rata-rata adalah = " + rataRata);
+    }
+}
